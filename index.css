@@ -1,0 +1,274 @@
+body {
+    background-color: #000;
+    scroll-behavior: auto;
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+code {
+    font-family: source-code-pro,Menlo,Monaco,Consolas,"Courier New",monospace
+}
+
+.App {
+    text-align: center;
+    background-color: #000
+}
+
+.slide-enter, .slide-exit {
+    transition: -webkit-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out
+}
+
+.slide-enter {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%)
+}
+
+    .slide-enter.slide-enter-active, .slide-exit {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+.slide-exit {
+    position: absolute;
+    top: 45px;
+    width: 100%
+}
+
+.slide-exit-active {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%)
+}
+
+.Home {
+    background: #000;
+    color: #fff
+}
+
+h1 {
+    font-size: 200px
+}
+
+h1, p {
+    text-align: center
+}
+
+p {
+    font-size:  166%;
+}
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  
+
+  .SkinComponent {
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 300px;
+    height: 300px;
+    background-color: #e8334e;
+    border-radius: 2px;
+    -webkit-filter: drop-shadow(0 0 1px hsla(0,0%,100%,.4));
+    filter: drop-shadow(0 0 1px rgb(0,0,0,.4));
+    transition: -webkit-filter .3s;
+    transition: filter .3s;
+    transition: filter .3s,-webkit-filter .3s
+}
+
+.SkinPreview {
+    position: relative;
+    width: 225px;
+    height: 225px;
+    border-radius: 1000px;
+    margin-top: 12px;
+    margin-left: 9%;
+    padding-top: 0px;
+    transition: 1s
+}
+
+.SkinComponent:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.SkinHeader {
+    position: relative;
+    height: 45px
+}
+
+.SkinName {
+    color: #ffffff;
+    padding-top: 12px;
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: center;
+}
+
+.SkinVersion {
+    float: left;
+    padding-left: 8px
+}
+
+.SkinVersion, .SkinYear {
+    padding-top: 18px;
+    color: grey;
+    font-size: 16px
+}
+
+.SkinYear {
+    float: right;
+    padding-right: 20px
+}
+
+.Skins {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit,350px);
+    margin: 5% 10% 0;
+    padding-bottom: 10%;
+    background: #000
+}
+
+.Navbar {
+    width: 96vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    height: 45px;
+    display: flex;
+    color: #aaa;
+    align-items: center;
+    justify-content: space-between
+}
+
+.NavbarContainer {
+    display: flex;
+    flex-direction: row
+}
+
+.NavbarBadge {
+    font-weight: 700;
+    font-size: 30px;
+    color: #fff;
+    padding-right: 40px
+}
+
+.NavbarButton {
+    padding-right: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: auto;
+    height: 25px;
+    line-height: 20px;
+    border-radius: 5px;
+    transition: .3s;
+    font-size: 20px
+}
+
+    .NavbarButton:hover {
+        color: #fff;
+        cursor: pointer
+    }
+
+a {
+    color: inherit;
+    text-decoration: inherit
+}
+
+.NavbarIcon {
+    padding-top: 16px;
+    padding-left: 14px;
+    height: 25px;
+    width: 25px;
+    opacity: .67;
+    transition: .3s
+}
+
+    .NavbarIcon:hover {
+        opacity: 1
+    }
+
+
+.invert { filter: invert(100%); }
+
+
+.LinkComponent {
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 400px;
+    height: 100px;
+    background-color: #e8334e;
+    border-radius: 2px;
+    -webkit-filter: drop-shadow(0 0 1px hsla(0,0%,100%,.4));
+    filter: drop-shadow(0 0 1px rgb(0,0,0,.4));
+    transition: -webkit-filter .3s;
+    transition: filter .3s;
+    transition: filter .3s,-webkit-filter .3s
+}
+
+.LinkPreview {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    top: -20px;
+    left: -20px;
+    margin-left: 9%;
+    padding-top: 0px;
+    transition: 1s
+}
+
+.LinkComponent:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.LinkHeader {
+    position: relative;
+    height: 45px
+}
+
+.LinkName {
+    color: #ffffff;
+    position: relative;
+    top: 37px;
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: center;
+}
+
+.LinkVersion {
+    float: left;
+    padding-left: 8px
+}
+
+.LinkVersion, .LinkYear {
+    padding-top: 18px;
+    color: grey;
+    font-size: 16px
+}
+
+.LinkYear {
+    float: right;
+    padding-right: 20px
+}
+
+.Links {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 150px;
+    /* how much height must each element occupy! change that! */
+    grid-gap: 0.1rem;
+    justify-content: center;
+    justify-items: center;
+}

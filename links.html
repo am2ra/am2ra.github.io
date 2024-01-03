@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="theme-color" content="#000000">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="/Users/Ketsi/Documents/GitHub/website/index.css" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<style>
+	body {
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color: #e8334e;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+
+  
+}
+	body {background-color: rgb(0, 0, 0);}
+	h1   {padding: auto; color: #ffffff; font-family: 'Times New Roman', Times, serif;}
+	h2   {color: #ffffff; font-family: 'Times New Roman', Times, serif;}
+	h3   {color: #ffffff; font-family: 'Times New Roman', Times, serif;}
+	p    {color: #ffffff; font-family: Verdana, Geneva, Tahoma, sans-serif;}
+</style>
+</head>
+<body>
+
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="/Users/Ketsi/Documents/GitHub/website/index.html">Home</a>
+		<a href="/Users/Ketsi/Documents/GitHub/website/about.html">About</a>
+		<a href="/Users/Ketsi/Documents/GitHub/website/skins.html">Skins</a>
+		<a href="/Users/Ketsi/Documents/GitHub/website/peripherals.html">Peripherals</a>
+		<a href="/Users/Ketsi/Documents/GitHub/website/links.html">Links</a>
+	  </div>
+	  
+	  <div id="main">
+		<span style="color: #000000; font-size:30px;cursor:pointer;position: absolute" onclick="openNav()">&#9776; </span>
+	  </div>
+	  
+	  <script>
+	  function openNav() {
+		document.getElementById("mySidenav").style.width = "250px";
+		document.getElementById("main").style.marginLeft = "250px";
+	  }
+	  
+	  function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+		document.getElementById("main").style.marginLeft= "0";
+	  }
+	  </script>
+	  <section style="z-index: -1;">
+		<img class="mySlides" src="/Users/Ketsi/Documents/GitHub/website/img/amara banner 2.png" style="width:100%;position: relative;top: -80px;z-index: -1;">
+		<img class="mySlides" src="/Users/Ketsi/Documents/GitHub/website/img/amara banner.png" style="width:100%;;position: relative;top: -80px;z-index: -1;">
+	  </section>
+<!-- Content will go here -->
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 6000);
+}
+</script>
+
+
+<section class="app" style="text-align:center">
+	<img src="/Users/Ketsi/Documents/GitHub/website/img/amara logo.png" style="position: relative; top: -30px; max-width: 30%;height: auto;" ><img>
+	<p style="color: #e8334e;position: relative;top: -80px;"><i>links</i></p>
+    <p style="padding-bottom: 110px;position: relative;top: -90px;"> All my links</p>
+  </section>
+
+  <div class="Links">
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="LinkComponent">
+        <a href="https://twitter.com/amarafps">
+            <div class="LinkHeader">
+                <div class="LinkName">Twitter</div>
+                <div class="LinkVersion"></div>
+            </div><img class="LinkPreview" src="/Users/Ketsi/Documents/GitHub/website/img/hp_icons/twitter.png"><img>
+        </a>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="LinkComponent">
+        <a href="https://twitch.tv/amara_fps">
+            <div class="LinkHeader">
+                <div class="LinkName">Twitch</div>
+                <div class="LinkVersion"></div>
+            </div><img class="LinkPreview" src="/Users/Ketsi/Documents/GitHub/website/img/hp_icons/twitch.png"><img>
+        </a>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="LinkComponent">
+        <a href="https://youtube.com/@amarafps">
+            <div class="LinkHeader">
+                <div class="LinkName">YouTube</div>
+                <div class="LinkVersion"></div>
+            </div><img class="LinkPreview" src="/Users/Ketsi/Documents/GitHub/website/img/hp_icons/youtube.png"><img>
+        </a>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="LinkComponent">
+        <a href="https://osu.ppy.sh/users/16970049">
+            <div class="LinkHeader">
+                <div class="LinkName">osu!</div>
+                <div class="LinkVersion"></div>
+            </div><img class="LinkPreview" src="/Users/Ketsi/Documents/GitHub/website/img/hp_icons/osu.png"><img>
+        </a>
+    </div>
+    <p style="padding-bottom: 20px;"></p>
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+</div>
+</div>
+
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+    <a href="https://github.com/amarafps"><i class="fa fa-github"></i></a>
+    <a href="https://www.twitch.tv/amara_fps"><i class="fa fa-twitch"></i></a>
+    <a href="https://www.youtube.com/@amarafps"><i class="fa fa-youtube-play"></i></a>
+    <a href="https://www.twitter.com/amarafps"><i class="fa fa-twitter"></i></a>
+    <p class="w3-medium">
+    </p>
+  </footer>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+</body>
+</html>
