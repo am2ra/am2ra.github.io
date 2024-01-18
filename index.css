@@ -1,10 +1,10 @@
-@font-face { font-family: Quicksand; src: url('/amarafps.github.io/static/Quicksand-Regular.ttf'); } 
+@font-face { font-family: Quicksand; src: url('/static/Quicksand-Regular.ttf'); } 
 h1 {
    font-family: Quicksand}
-@font-face { font-family: QuicksandBold; src: url('/amarafps.github.io/static/Quicksand-SemiBold.ttf'); } 
+@font-face { font-family: QuicksandBold; src: url('/static/Quicksand-SemiBold.ttf'); } 
 h1 {
     font-family: QuicksandBold}
-@font-face { font-family: Giada; src: url('/amarafps.github.io/static/Giada.ttf'); } 
+@font-face { font-family: QuicksandBold; src: url('/static/Giada.ttf'); } 
 body {
     background-color: #000;
     scroll-behavior: auto;
