@@ -5,6 +5,7 @@ h1 {
 h1 {
     font-family: QuicksandBold}
 @font-face { font-family: QuicksandBold; src: url('/static/Giada.ttf'); } 
+
 body {
     background-color: #000;
     scroll-behavior: auto;
