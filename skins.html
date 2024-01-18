@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-------- HTML Head -------->
 <head>
 <meta charset="UTF-8">
 <meta name="theme-color" content="#000000">
@@ -7,13 +8,33 @@
 <meta content="0; URL=https://amarafps.github.io/skins">
 <link href="/index.css" rel="stylesheet">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <title>amarafps | Skins</title>
 <meta name="amara" content="amarafps's Personal Website">
 <style>
+@font-face { font-family: Quicksand; src: url('/static/Quicksand-Regular.ttf'); } 
+h1 {
+   font-family: Quicksand}
+@font-face { font-family: QuicksandBold; src: url('/static/Quicksand-SemiBold.ttf'); } 
+h1 {
+    font-family: QuicksandBold}
+@font-face { font-family: Giada; src: url('/static/Giada.ttf'); } 
+
 	body {
-  font-family: "Lato", sans-serif;
+  font-family: "Quicksand";
   transition: background-color .5s;
 }
+
+.theSlides {
+  display: none;
+  text-align: center;
+}
+
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #000000;
+  }
 
 .sidenav {
   height: 100%;
@@ -56,18 +77,21 @@
   
 }
 	body {background-color: rgb(0, 0, 0);}
-	h1   {padding: auto; color: #ffffff; font-family: 'Times New Roman', Times, serif;}
-	h2   {color: #ffffff; font-family: 'Times New Roman', Times, serif;}
-	h3   {color: #ffffff; font-family: 'Times New Roman', Times, serif;}
-	p    {color: #ffffff; font-family: Verdana, Geneva, Tahoma, sans-serif;}
+	h1   {padding: auto; color: #ffffff; font-family: 'Quicksand'}
+	h2   {color: #ffffff; font-family: 'Quicksand'}
+	h3   {color: #ffffff; font-family: 'Quicksand'}
+	p    {color: #ffffff; font-family: 'Quicksand'}
 </style>
 </head>
+
 <body>
 
+<!-------- Sidenav -------->
+<div>
 	<div id="mySidenav" class="sidenav">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 		<a href="/">Home</a>
-		<a href="/about">About</a>
+		<a href="/settings">Settings</a>
 		<a href="/skins">Skins</a>
 		<a href="/peripherals">Peripherals</a>
 		<a href="/links">Links</a>
@@ -89,29 +113,65 @@
 	  }
 	  </script>
 	  <section style="z-index: -1;">
-		<img class="mySlides" src="/img/amara banner 2.png" style="width:100%;position: relative;top: -80px;z-index: -1;">
-		<img class="mySlides" src="/img/amara banner.png" style="width:100%;;position: relative;top: -80px;z-index: -1;">
+		<img src="/img/amara banner 2.png" style="width:100%;position: relative;top: -1cm;z-index: -1;">
 	  </section>
-<!-- Content will go here -->
+  </div>
 
+<!-------- Slide Script -------->
 <script>
-var myIndex = 0;
-carousel();
+  var slideIndex = 1;
+  showSlides(slideIndex);
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
   }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}
-  x[myIndex-1].style.display = "block";
-  setTimeout(carousel, 6000);
-}
-</script>
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("theSlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+    </script>
+
+<!-------- Spacing? (i have no idea how to describe it but its important ig) -------->
+<div>
+    <div>
+    <div style="margin-bottom: -1.5cm;">
+    </div>
+    </div>
+</div>
+<!-------------------------------- Page Contents (Free to change) -------------------------------->
+
+<!-------- Beginning text -------->
+<div>
+<h1 style="font-family: Giada; width: 100%;margin-bottom: -100px;font-size: 150px">amara</h1>
+<p style="font-family: Quicksand;font-size: 20px;margin-bottom: -15px;">skins</p>
+<p style="font-family: Quicksand;font-size: 15px;margin-bottom: -15px;">All my Skins for osu! and Kovaaks (Soon)</p>
+<p style="font-family: Quicksand;font-size: 15px;margin-bottom: -15px;color: #e8334e;">Last updated:</p>
+<p style="font-family: QuicksandBold;font-size: 16px;margin-bottom: 150px;">2024-1-18</p>
+</div>
 
 
+<!-------- Bottom text -------->
+<div>
+  <p style="margin-top: 200px;margin-bottom: -50px ;font-size: 20px; ">If anything is missing, out of date or you would like to know, please let me know on Twitter.</p>
+  </div>
+  
+<!-------- Page footer -------->  
 <footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
     <a href="https://github.com/amarafps"><i class="fa fa-github"></i></a>
     <a href="https://www.twitch.tv/amara_fps"><i class="fa fa-twitch"></i></a>
@@ -120,6 +180,6 @@ function carousel() {
     <p class="w3-medium">
     </p>
   </footer>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
 </body>
 </html>
