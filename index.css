@@ -1,48 +1,32 @@
+@font-face { font-family: Quicksand; src: url('/amarafps.github.io/static/Quicksand-Regular.ttf'); } 
+h1 {
+   font-family: Quicksand}
+@font-face { font-family: QuicksandBold; src: url('/amarafps.github.io/static/Quicksand-SemiBold.ttf'); } 
+h1 {
+    font-family: QuicksandBold}
+@font-face { font-family: Giada; src: url('/amarafps.github.io/static/Giada.ttf'); } 
 body {
     background-color: #000;
     scroll-behavior: auto;
     position: relative;
     overflow-x: hidden;
     margin: 0;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    font-family: 'Quicksand';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale
 }
 
+img {
+    text-align: center;
+}
+
 code {
-    font-family: source-code-pro,Menlo,Monaco,Consolas,"Courier New",monospace
+    font-family: 'Quicksand'
 }
 
 .App {
     text-align: center;
     background-color: #000
-}
-
-.slide-enter, .slide-exit {
-    transition: -webkit-transform .2s ease-in-out;
-    transition: transform .2s ease-in-out;
-    transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out
-}
-
-.slide-enter {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%)
-}
-
-    .slide-enter.slide-enter-active, .slide-exit {
-        -webkit-transform: translateX(0);
-        transform: translateX(0)
-    }
-
-.slide-exit {
-    position: absolute;
-    top: 45px;
-    width: 100%
-}
-
-.slide-exit-active {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%)
 }
 
 .Home {
@@ -59,12 +43,11 @@ h1, p {
 }
 
 p {
-    font-size:  166%;
+    font-size:  30px;
 }
   
   code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
+    font-family: 'Quicksand'
   }
   
 
@@ -271,4 +254,56 @@ a {
     grid-gap: 0.1rem;
     justify-content: center;
     justify-items: center;
+}
+
+/* CSS */
+.button-28 {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Quicksand';
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: max-content !important;
+  will-change: transform;
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  color: #fff;
+  background-color: #ffffff;
+  color: #000;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+
+h2{
+    display: inline;
+    font-family: 'Quicksand'
 }

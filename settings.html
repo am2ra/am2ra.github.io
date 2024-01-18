@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-------- HTML Head -------->
+<head>
+<meta charset="UTF-8">
+<meta name="theme-color" content="#000000">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="0; URL=https://amarafps.github.io/settings">
+<link href="/index.css" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<title>amarafps | Settings</title>
+<meta name="amara" content="amarafps's Personal Website">
+<style>
+	body {
+  font-family: "Quicksand";
+  transition: background-color .5s;
+}
+
+.theSlides {
+  display: none;
+  text-align: center;
+}
+
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #000000;
+  }
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color: #e8334e;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+
+  
+}
+	body {background-color: rgb(0, 0, 0);}
+	h1   {padding: auto; color: #ffffff; font-family: 'Quicksand'}
+	h2   {color: #ffffff; font-family: 'Quicksand'}
+	h3   {color: #ffffff; font-family: 'Quicksand'}
+	p    {color: #ffffff; font-family: 'Quicksand'}
+</style>
+</head>
+
+<body>
+
+<!-------- Sidenav -------->
+<div>
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="/">Home</a>
+		<a href="/settings">Settings</a>
+		<a href="/skins">Skins</a>
+		<a href="/peripherals">Peripherals</a>
+		<a href="/links">Links</a>
+	  </div>
+	  
+	  <div id="main">
+		<span style="color: #000000; font-size:30px;cursor:pointer;position: absolute" onclick="openNav()">&#9776; </span>
+	  </div>
+	  
+	  <script>
+	  function openNav() {
+		document.getElementById("mySidenav").style.width = "250px";
+		document.getElementById("main").style.marginLeft = "250px";
+	  }
+	  
+	  function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+		document.getElementById("main").style.marginLeft= "0";
+	  }
+	  </script>
+	  <section style="z-index: -1;">
+		<img src="/img/amara banner 2.png" style="width:100%;position: relative;top: -1cm;z-index: -1;">
+	  </section>
+  </div>
+
+<!-------- Slide Script -------->
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("theSlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+    </script>
+
+<!-------- Spacing? (i have no idea how to describe it but its important ig) -------->
+<div>
+    <div>
+    <div style="margin-bottom: -1.5cm;">
+    </div>
+    </div>
+</div>
+<!-------------------------------- Page Contents (Free to change) -------------------------------->
+
+<!-------- Beginning text -------->
+<div>
+<h1 style="font-family: Giada; width: 100%;margin-bottom: -100px;font-size: 150px">amara</h1>
+<p style="font-family: Quicksand;font-size: 20px;margin-bottom: -15px;">settings</p>
+<p style="font-family: Quicksand;font-size: 15px;margin-bottom: -15px;">All my settings including: Drunkdeer, Lamzu Thorn, Windows, Overwatch, Apex Legends, osu!, osu! tablet drivers, etc.</p>
+<p style="font-family: Quicksand;font-size: 15px;margin-bottom: -15px;color: #e8334e;">Last updated:</p>
+<p style="font-family: QuicksandBold;font-size: 16px;margin-bottom: 150px;">2024-1-18</p>
+</div>
+
+<!-------- Drunkdeer A75 Settings -------->
+<div>
+    <p style="font-size: 250%; margin-bottom: -30px; font-family: QuicksandBold">Drunkdeer A75 Settings</p>
+
+        <div class="dot-container" style="color: #fff;font-size: 150%; margin-bottom: -20px;">
+          <span onclick="currentSlide(1)" style="color: #e8334e;cursor:pointer">fps</span> 
+          <span>|</span>
+          <span onclick="currentSlide(2)" style="color: #e8334e;cursor:pointer">osu!</span> 
+        </div>
+        
+
+    <div class="slideshow-container">
+
+    <!-- FPS Slide (6) -->
+      <div class="theSlides">
+        <p style="margin-bottom: 0px;">FPS Settings</p>
+        <img style="height: 500px; border-radius: 15px; margin-bottom: 3px;" src="/img/drunkdeer/drunkdeer fps profile.png" alt="FPS Profile">
+        <div>
+            <a href="https://drunkdeer-antler.com/#/" class="button-28 w3-center" role="button">Go to Web Driver</a>
+            <a href="https://drive.google.com/file/d/1-1iEsKF8phSBGpDJw-991aDM6ucOBisj/view?usp=sharing" target="_blank" class="button-28" role="button">Download</a></div>
+        </div>
+      </div>
+
+    <!-- osu Slide (2) -->
+      <div class="theSlides">
+        <p style="margin-bottom: 0px;">osu! Settings</p>
+        <img style="height: 500px; border-radius: 15px; margin-bottom: 3px;" src="/img/drunkdeer/drunkdeer osu profile.png" alt="osu Profile">
+        <div>
+            <a href="https://drunkdeer-antler.com/#/" class="button-28 w3-center" role="button">Go to Web Driver</a>
+            <a href="https://drive.google.com/file/d/1-1iEsKF8phSBGpDJw-991aDM6ucOBisj/view?usp=sharing" target="_blank" class="button-28" role="button">Download</a></div>
+        </div>
+    </div>
+
+<!-------- Lamzu Thorn Settings -------->
+<div>
+    <p style="font-size: 250%; margin-bottom: -30px; font-family: QuicksandBold">Lamzu Thorn Settings</p>
+  <div class="dot-container" style="color: #fff;font-size: 150%; margin-bottom: -20px;">
+    <span onclick="currentSlide(3)" style="color: #e8334e;cursor:pointer">2024-1-17</span> 
+    <!-- <span>|</span> -->
+  </div>
+<div>
+
+  <div class="slideshow-container">
+    <!-- Lamzu Thorn Slide (3) -->
+    <div class="theSlides">
+    <p style="margin-bottom: 0px;">2024-1-17 Lamzu Thorn Settings</p>
+    <img style="height: 500px; border-radius: 15px;  margin-bottom: 3px;" src="/img/lamzu/mouse settings.png" alt="Lamzu Settings">
+    <div> 
+      <a href="https://lamzu.com/pages/thorn-fnatic-thorn-download#Driver" class="button-28 w3-center" target="_blank" role="button">Download Lamzu Thorn Software</a>
+    </div>
+  </div>
+
+  </div>
+</div>
+</div>
+
+<!-------- PC OPTIMIZATION -------->
+<div>
+  <p style="font-size: 250%; margin-bottom: -30px; font-family: QuicksandBold">PC Optimization</p>
+  <div class="dot-container" style="color: #fff;font-size: 150%; margin-bottom: -20px;">
+    <span onclick="currentSlide(4)" style="color: #e8334e;cursor:pointer">Windows Tweaks</span> 
+    <span>|</span>
+    <span onclick="currentSlide(5)" style="color: #e8334e;cursor:pointer">Overwatch</span> 
+    <span>|</span>
+    <span onclick="currentSlide(6)" style="color: #e8334e;cursor:pointer">Apex Legends</span> 
+    <span>|</span>
+    <span onclick="currentSlide(7)" style="color: #e8334e;cursor:pointer">osu!</span> 
+  <div class="slideshow-container">
+
+    <!-- Windows Slide (4) -->
+    <div class="theSlides">
+      <p style="margin-bottom: 0px;">Windows Tweaks</p>
+      <iframe style="border-radius: 15px;" width="889" height="500" src="https://www.youtube.com/embed/kIftrmT-PmM?si=7ebm_KKQ7uhpicTx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    <div>
+          <a href="https://drive.google.com/drive/folders/1w4NGmPf_F7U56QKjiq9vhRiqtMrTdnZD?usp=sharing" target="_blank" class="button-28 w3-center" role="button">Download</a>
+      </div>
+    </div>
+
+    <!-- Overwatch Slide (5) -->
+    <div class="theSlides">
+      <p style="margin-bottom: 0px;">Overwatch Settings</p>
+      <iframe style="border-radius: 15px;" width="889" height="500" src="https://www.youtube.com/embed/HNcjG6xEYmo?si=CSKTwN_0SQIDg9qo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    <div>
+          <a href="https://drive.google.com/file/d/1VSg597-6xFbf4r7cMfi49kS26REogKEO/view?usp=sharing"  target="_blank" class="button-28 w3-center" role="button">Crosshair</a>
+      </div>
+    </div>
+
+    <!-- Apex Slide (6) -->
+    <div class="theSlides">
+      <p style="margin-bottom: 0px;">Apex Legends Settings</p>
+      <img style="height: 500px; border-radius: 15px; margin-bottom: 3px;" src="/img/apex/apex tweaks.png" alt="Apex Settings">
+      <div>
+          <a href="https://drive.google.com/drive/folders/1x2epGG1iMrjq6v5Oo2kmBw4u0lawo-G1?usp=sharing" target="_blank" class="button-28 w3-center" role="button">Download</a>
+      </div>
+    </div>
+
+    <!-- osu! Slide (7) -->
+    <div class="theSlides">
+      <p style="margin-bottom: 0px;">osu! Settings</p>
+      <iframe style="border-radius: 15px;" width="889" height="500" src="https://www.youtube.com/embed/DrcKlpISkJM?si=a65ulEq5IfcJwtwy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>      <div>
+          <a href="https://drive.google.com/drive/folders/1gjzRc3WSd18a4I_TMaNrZCXJCeHdiQKh?usp=sharing" target="_blank" class="button-28 w3-center" role="button">Download</a>
+      </div>
+    </div>
+
+  </div>
+  </div>
+</div>
+
+<!-------- Tablet Driver Settings -------->
+<div>
+  <p style="font-size: 250%; margin-bottom: -30px; font-family: QuicksandBold">osu! Tablet Settings</p>
+<div class="dot-container" style="color: #fff;font-size: 150%; margin-bottom: -20px;">
+  <span onclick="currentSlide(8)" style="color: #e8334e;cursor:pointer">2024-1-18</span> 
+  <!-- <span>|</span> -->
+</div>
+<div>
+
+<div class="slideshow-container">
+  <!-- Tablet Driver Slide (8) -->
+  <div class="theSlides">
+  <p style="margin-bottom: 0px;">CTL-672 Settings</p>
+  <img style="height: 500px; border-radius: 15px;  margin-bottom: 3px;" src="/img/devocub/tablet settings.png" alt="Lamzu Settings">
+  <div> 
+    <a href="https://github.com/Devocub/TabletDriver/releases/tag/v0.1.5.6" class="button-28 w3-center" target="_blank" role="button">Devocub</a>
+    <a href="https://drive.google.com/file/d/14H77zLtbzL7AHcKczJRpIZMO4IynKHDq/view?usp=drive_link" class="button-28 w3-center" target="_blank" role="button">Download Settings</a>
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-------- Bottom text -------->
+<div>
+<p style="margin-top: 200px;margin-bottom: -50px ;font-size: 20px; ">If anything is missing, out of date or you would like to know, please let me know on Twitter.</p>
+</div>
+
+<!-------- Page footer -------->  
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+    <a href="https://github.com/amarafps"><i class="fa fa-github"></i></a>
+    <a href="https://www.twitch.tv/amara_fps"><i class="fa fa-twitch"></i></a>
+    <a href="https://www.youtube.com/@amarafps"><i class="fa fa-youtube-play"></i></a>
+    <a href="https://www.twitter.com/amarafps"><i class="fa fa-twitter"></i></a>
+    <p class="w3-medium">
+    </p>
+  </footer>
+
+</body>
+</html>

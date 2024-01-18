@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-------- HTML Head -------->
 <head>
 <meta charset="UTF-8">
 <meta name="theme-color" content="#000000">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta content="0; URL=https://amarafps.github.io">
+<meta content="0; URL=https://amarafps.github.io/">
 <link href="/index.css" rel="stylesheet">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
-<title>amarafps</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<title>amarafps | Home</title>
 <meta name="amara" content="amarafps's Personal Website">
 <style>
 	body {
-  font-family: "Lato", sans-serif;
+  font-family: "Quicksand";
   transition: background-color .5s;
 }
+
+.theSlides {
+  display: none;
+  text-align: center;
+}
+
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #000000;
+  }
 
 .sidenav {
   height: 100%;
@@ -56,18 +69,21 @@
   
 }
 	body {background-color: rgb(0, 0, 0);}
-	h1   {padding: auto; color: #ffffff; font-family: 'Times New Roman', Times, serif;}
-	h2   {color: #ffffff; font-family: 'Times New Roman', Times, serif;}
-	h3   {color: #ffffff; font-family: 'Times New Roman', Times, serif;}
-	p    {color: #ffffff; font-family: Verdana, Geneva, Tahoma, sans-serif;}
+	h1   {padding: auto; color: #ffffff; font-family: 'Quicksand'}
+	h2   {color: #ffffff; font-family: 'Quicksand'}
+	h3   {color: #ffffff; font-family: 'Quicksand'}
+	p    {color: #ffffff; font-family: 'Quicksand'}
 </style>
 </head>
+
 <body>
 
+<!-------- Sidenav -------->
+<div>
 	<div id="mySidenav" class="sidenav">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 		<a href="/">Home</a>
-		<a href="/about">About</a>
+		<a href="/settings">Settings</a>
 		<a href="/skins">Skins</a>
 		<a href="/peripherals">Peripherals</a>
 		<a href="/links">Links</a>
@@ -89,89 +105,106 @@
 	  }
 	  </script>
 	  <section style="z-index: -1;">
-		<img class="mySlides" src="/img/amara banner 2.png" style="width:100%;position: relative;top: -80px;z-index: -1;">
-		<img class="mySlides" src="/img/amara banner.png" style="width:100%;;position: relative;top: -80px;z-index: -1;">
+		<img src="/img/amara banner 2.png" style="width:100%;position: relative;top: -1cm;z-index: -1;">
 	  </section>
-<!-- Content will go here -->
+  </div>
 
+<!-------- Slide Script -------->
 <script>
-var myIndex = 0;
-carousel();
+  var slideIndex = 1;
+  showSlides(slideIndex);
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
   }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}
-  x[myIndex-1].style.display = "block";
-  setTimeout(carousel, 6000);
-}
-</script>
 
-<section class="app" style="text-align:center">
-	<img src="/img/amara logo.png" style="position: relative; top: -30px; max-width: 30%;height: auto;" ><img>
-	<p style="color: #e8334e;position: relative;top: -80px;"><i>occasional aimer</i></p>
-  </section>
-  <section class="w3-container w3-content w3-center" style="max-width:600px">
-	<p style="text-align:center;position: relative; top: -75px;">
-	Hi! I'm Amara, a Welsh girl. Thank you for checking out the website, this is a side project of mine and is being used to learn html, css and javascript (I'm still very new and a lot of the code is heavily helped by the internet, especially W3Schools) </p>
-	</section>
-	<!--
-		<div class="Skins">
-			 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-			<div class="SkinComponent">
-				<a href="https://twitter.com/ohvolbeatz">
-					<div class="SkinHeader">
-						<div class="SkinName">ohvolbeatz</div>
-						<div class="SkinVersion"></div>
-					</div><img class="SkinPreview" src="/img/beatz pfp.jpg"><img>
-				</a>
-			</div>
-			 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
-			<div class="SkinComponent">
-				<a href="https://twitter.com/paddythelilguy">
-					<div class="SkinHeader">
-						<div class="SkinName">Paddy</div>
-						<div class="SkinVersion"></div>
-					</div><img class="SkinPreview" src="/img/paddy pfp.jpg"><img>
-				</a>
-			</div>
-			 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
-			<div class="SkinComponent">
-				<a href="https://twitter.com/SikarFPS">
-					<div class="SkinHeader">
-						<div class="SkinName">Sikar</div>
-						<div class="SkinVersion"></div>
-					</div><img class="SkinPreview" src="/img/sikar pfp.png"><img>
-				</a>
-			</div>
-			 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
-			<div class="SkinComponent">
-				<a href="https://twitter.com/kasketbase">
-					<div class="SkinHeader">
-						<div class="SkinName">Jaillyn</div>
-						<div class="SkinVersion"></div>
-					</div><img class="SkinPreview" src="/img/jaillyn pfp.jpg"><img>
-				</a>
-			</div>
-			 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-		</div>
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("theSlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+    </script>
+
+<!-------- Spacing? (i have no idea how to describe it but its important ig) -------->
+<div>
+    <div>
+    <div style="margin-bottom: -1.5cm;">
+    </div>
+    </div>
+</div>
+
+<!-------------------------------- Page Contents (Free to change) -------------------------------->
+
+<!-------- Beginning text -------->
+<div>
+	<h1 style="font-family: Giada; width: 100%;margin-bottom: -100px;font-size: 150px">amara</h1>
+	<p style="font-family: Quicksand;font-size: 20px;margin-bottom: -15px;">home</p>
+	<p style="font-family: Quicksand;font-size: 15px;margin-bottom: -15px;margin-left: 30%;margin-right: 30%;">Hi! I'm Amara, a Welsh girl. Thank you for checking out the website, this is a side project of mine and is being used to learn html, css and javascript (I'm still very new and a lot of the code is heavily helped by the internet, especially W3Schools)</p>
 	</div>
-	  <footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
-		<a href="https://github.com/amarafps"><i class="fa fa-github"></i></a>
-		<a href="https://www.twitch.tv/amara_fps"><i class="fa fa-twitch"></i></a>
-		<a href="https://www.youtube.com/@amarafps"><i class="fa fa-youtube-play"></i></a>
-		<a href="https://www.twitter.com/amarafps"><i class="fa fa-twitter"></i></a>
-		<p class="w3-medium">
-		</p>
+<!--
+	<div class="Skins">
+			----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		<div class="SkinComponent">
+			<a href="https://twitter.com/ohvolbeatz">
+				<div class="SkinHeader">
+					<div class="SkinName">ohvolbeatz</div>
+					<div class="SkinVersion"></div>
+				</div><img class="SkinPreview" src="/img/beatz pfp.jpg"><img>
+			</a>
+		</div>
+			---------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+		<div class="SkinComponent">
+			<a href="https://twitter.com/paddythelilguy">
+				<div class="SkinHeader">
+					<div class="SkinName">Paddy</div>
+					<div class="SkinVersion"></div>
+				</div><img class="SkinPreview" src="/img/paddy pfp.jpg"><img>
+			</a>
+		</div>
+			---------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+		<div class="SkinComponent">
+			<a href="https://twitter.com/SikarFPS">
+				<div class="SkinHeader">
+					<div class="SkinName">Sikar</div>
+					<div class="SkinVersion"></div>
+				</div><img class="SkinPreview" src="/img/sikar pfp.png"><img>
+			</a>
+		</div>
+			---------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+		<div class="SkinComponent">
+			<a href="https://twitter.com/kasketbase">
+				<div class="SkinHeader">
+					<div class="SkinName">Jaillyn</div>
+					<div class="SkinVersion"></div>
+				</div><img class="SkinPreview" src="/img/jaillyn pfp.jpg"><img>
+			</a>
+		</div>
+			---------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+</div>
 
+<!-------- Page footer -------->  
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+    <a href="https://github.com/amarafps"><i class="fa fa-github"></i></a>
+    <a href="https://www.twitch.tv/amara_fps"><i class="fa fa-twitch"></i></a>
+    <a href="https://www.youtube.com/@amarafps"><i class="fa fa-youtube-play"></i></a>
+    <a href="https://www.twitter.com/amarafps"><i class="fa fa-twitter"></i></a>
+    <p class="w3-medium">
+    </p>
+  </footer>
 
-
-
-	  </footer>
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 </body>
 </html>
