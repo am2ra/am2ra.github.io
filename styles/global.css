@@ -1,0 +1,148 @@
+:root {
+  --fg: white;
+  --bg: black;
+  --accent: #b375fa;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+@keyframes static {
+  0% {
+    transform: translateX(-1000px);
+  }
+
+  33% {
+    transform: translateY(-1000px);
+  }
+
+  66% {
+    transform: translateX(1000px);
+  }
+
+  100% {
+    transform: translateY(1000px);
+  }
+}
+
+html {
+  background-color: var(--bg);
+  overflow: hidden;
+  position: relative;
+}
+
+@media only screen and (min-width: 992px) {
+  body::before {
+    content: '';
+    background-color: black;
+    background-image: url('https://goth.zip/noise.svg');
+    position: absolute;
+    left: -1000px;
+    height: calc(100% + 2000px);
+    width: calc(100% + 2000px);
+    top: -1000px;
+    filter: grayscale(100%);
+    opacity: 13%;
+    animation: static 1s linear infinite alternate-reverse;
+    mix-blend-mode: exclusion;
+    pointer-events: none;
+  }
+}
+
+
+
+body {
+  color: var(--fg);
+  height: 100vh;
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: never;
+  font-synthesis: none;
+  font-family: "goth";
+
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    overflow: scroll;
+  }
+
+  body {
+    min-height: auto;
+  }
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  image-rendering: -webkit-optimize-contrast;
+
+}
+
+::-webkit-scrollbar {
+  height: 7px;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+@font-face {
+  font-family: 'mononokiregular';
+  src: url('./fonts/mononoki-regular.ttf') format('ttf')
+
+}
+
+code {
+  font-family:
+    "mononokiregular";
+}
+
+@font-face {
+  font-family: "ank24";
+  src: url('./fonts/ank24.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "goth";
+  src: local("ms pgothic"),
+    url('./fonts/gothic.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Xentype';
+  src: url('./fonts/Xentype/Xentype.eot');
+  src: url('./fonts/Xentype/Xentype.woff') format('woff'),
+    url('./fonts/Xentype/Xentype.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'Xentype';
+    src: url('./fonts/Xentype/Xentype.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+

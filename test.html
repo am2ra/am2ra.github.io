@@ -1,95 +1,92 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
 <head>
-  <meta charset="utf-8">
-  <link href="./index.css" rel="stylesheet">
-  <link href="./index.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-  
-  <title>load demo</title>
-  <style>
-    @font-face { font-family: Quicksand; src: url('./static/Quicksand-Regular.ttf'); } 
-    h1 {
-       font-family: Quicksand}
-    @font-face { font-family: QuicksandBold; src: url('./static/Quicksand-SemiBold.ttf'); } 
-    h1 {
-        font-family: QuicksandBold}
-    @font-face { font-family: Giada; src: url('./static/Giada.ttf'); } 
-    
-    
-        body {
-      font-family: "Quicksand";
-      transition: background-color .5s;
-    }
-    
-    .theSlides {
-      display: none;
-      text-align: center;
-    }
-    
-    .dot-container {
-        text-align: center;
-        padding: 20px;
-        background: #000000;
-      }
-    
-    .sidenav {
-      height: 100%;
-      width: 0;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      background-color: #000000;
-      overflow-x: hidden;
-      transition: 0.5s;
-      padding-top: 60px;
-    }
-    .sidenav a {
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      font-size: 25px;
-      color: #ffffff;
-      display: block;
-      transition: 0.3s;
-    }
-    .sidenav a:hover {
-      color: #e8334e;
-    }
-    .sidenav .closebtn {
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px;
-    }
-    #main {
-      transition: margin-left .5s;
-      padding: 16px;
-    }
-    @media screen and (max-height: 450px) {
-      .sidenav {padding-top: 15px;}
-      .sidenav a {font-size: 18px;}
-    
-      
-    }
-        body {background-color: rgb(0, 0, 0);}
-        h1   {padding: auto; color: #ffffff; font-family: 'Quicksand'}
-        h2   {color: #ffffff; font-family: 'Quicksand'}
-        h3   {color: #ffffff; font-family: 'Quicksand'}
-        p    {color: #ffffff; font-family: 'Quicksand'}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        var lastfmData = {
+            baseURL:'https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=',
+            // Your Last.fm Username
+            user: '<USERNAME>',
+            // Your API key
+            api_key: '<APIKEY>',
+            additional: '&format=json&limit=1',
+        }
+
+        var getSetLastFM = function () {
+            $.ajax({
+                type: 'GET',
+                url:
+                    lastfmData.baseURL +
+                    lastfmData.user +
+                    '&api_key=' +
+                    lastfmData.api_key +
+                    lastfmData.additional,
+                dataType: 'json',
+                success: function (resp) {
+                    let nowplaying = null;
+                    nowplaying = resp.recenttracks.track[0]['@attr'];
+                    var x = document.getElementById("trackart");
+                    var y = document.getElementById("trackartist");
+                    var z = document.getElementById("tracktitle");
+                    x.style.display = "none";
+                    y.style.display = "none";
+                    z.style.display = "none";
+                    if (nowplaying.nowplaying === 'true')
+                    {
+                        x.style.display = "block";
+                        y.style.display = "block";
+                        z.style.display = "block";
+                        var recentTrack = resp.recenttracks.track[0];
+                        var formatted = recentTrack.name;
+                        $('a#tracktitle')
+                            .html(formatted)
+                            .attr('title', recentTrack.name + ' by ' + recentTrack.artist['#text'])
+                            .attr('target', '_blank');
+                        var artistFormatted = recentTrack.artist['#text'];
+                        $('a#trackartist')
+                            .html(artistFormatted)
+                            .attr('title', 'Artist : ' + recentTrack.artist['#text']);
+                        $('img#trackart').attr('src', recentTrack.image[3]['#text']);
+                    };
+                },
+                error: function (resp) {
+                    $('a#tracktitle').html(' ');
+                    $('img#trackart').attr('src', 'https://imgur.com/SxvDy8G');
+                    var artistFormatted = "<img src='https://imgur.com/SxvDy8G'> ";
+                    $('a#trackartist').html(artistFormatted);
+                },
+            })
+        };
+
+        // Get the new one.
+        getSetLastFM();
+        // Start the countdown.
+        setInterval(getSetLastFM, 10 * 1000);
+
+    </script>
+    <style>
+        div.aligncenter {
+            text-align: center;
+        }
+
+        img {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
     </style>
-  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 </head>
 <body>
- 
-<b>Projects:</b>
-<ol id="new-projects"></ol>
- 
-<script>
-$( "#scenarios" ).load( "./kovaaks-scenarios.html" );
-</script>
- 
+
+    <div font-size="3" color="#E6E6E6">
+        <div>
+            <img id="trackart" src="#">
+            <div class="aligncenter">
+                <a id="trackartist"></a>
+                <a id="tracktitle"></a>
+
+            </div>
+
+    </div>
+    </div>
 </body>
 </html>
