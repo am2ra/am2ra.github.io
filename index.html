@@ -1,70 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-------- HTML Head -------->
 <head>
-<meta charset="UTF-8">
-<meta name="theme-color" content="#000000">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta content="0; URL=https://am2ra.github.io/">
-<link href="./index.css" rel="stylesheet">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-<title>( ͡° ͜ʖ ͡°)</title>
-<link rel="icon" type="image/x-icon" href="./img/favicon.png">
-<meta property="og:title" content="am2ra's personal site.">
-<meta property="og:description" content="Have you been looking forward to it that much?">
-<meta property="og:url" content="https://am2ra.github.io/" />
-<meta property="og:image" content="https://i.imgur.com/u1R5oMK.png">
-<style>
-	body {background-color: rgb(0, 0, 0);}
-	h1   {padding: auto; color: #ffffff; font-family: 'American Type Medium'}
-	h2   {color: #ffffff; font-family: 'American Type Medium'}
-	h3   {color: #ffffff; font-family: 'American Type Medium'}
-	p    {color: #ffffff; font-family: 'American Type Medium'}
-</style>
+    <meta name="theme-color" content="#000000">
+    <meta charset="UTF-8">
+    <meta content="0; URL=https://am2ra.github.io/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+    <meta property="og:title" content="am2ra's personal site.">
+    <meta property="og:description" content="Have you been looking forward to it that much?">
+    <meta property="og:url" content="https://am2ra.github.io/" />
+    <meta property="og:image" content="https://i.imgur.com/u1R5oMK.png">
+    <title>am2ra</title>
 </head>
-
 <body>
-  <div id="background"></div>
-<!-------- NAV (goat) -------->
-<div class="box" id="tabs">
-  <a id="tab1" href="./">home</a>
-  <span> | </span>
-  <a id="tab1" href="./settings">settings</a>
-  <span> | </span>
-  <a id="tab1" href="./peripherals">peripherals</a>
-  <span> | </span>
-  <a id="tab1" href="./aboutme">about me</a>
-  <span> | </span>
-  <a id="tab1" href="./kovaaks">kovaaks</a>
-</div>
-</div>
-<div class="box" ><img src="./img/amara icon.png" class="center" style="height: 330px;"></img></div>
-<div class="box" id="welcome" style="margin-top: -2.75%;">
-    <p id="welcome-text">welcome</p>
-</div>
-<div class="box" id="about-me">
-  <p id="about-me-text" style="margin-top: -9.5%;margin-bottom: 5%;">hi! im amara, a welsh girl. thank you for checking out the website, this is a side project of mine and is being used to learn html, css and javascript (im still very new and a lot of the code is heavily helped by the internet)</p>
-  <p id="about-me-text" style="color: #b1f900;">last updated:</p>
-  <p id="about-me-text" style="color: #000000;background-color: #b1f900; max-width: max-content;    position: relative;
-  top:50%; transform: translateY(-50%);margin: 0 auto; text-shadow: 1px 1px 1px #000000;">2024-9-10</p>
-</div>
 
-<!-------------------------------- Page Contents (Free to change) -------------------------------->
+<div id="background"></div>
+    <main>
+        <div class="text-box">
+            <nav class="vertical-menu">
+                <ul>
+                    <li><a href="#home" class="nav-link" data-section="home">HOME</a></li>
+                    <li><a href="#PERIPHERALS" class="nav-link" data-section="PERIPHERALS">PERIPHERALS</a></li>
+                    <li><a href="#deadlock" class="nav-link" data-section="deadlock">DEADLOCK</a></li>
+                    <li><a href="#linux" class="nav-link" data-section="linux">LINUX</a></li>
+                    <li><a href="#specs" class="nav-link" data-section="specs">SPECS</a></li>
+                    <li><a href="#about" class="nav-link" data-section="about">ABOUT</a></li>
+                </ul>
+            </nav>
+        </div>
 
-<!-------- Page footer -------->  
+        <!-- HOME Section -->
+        <div id="home" class="content-section active">
+            <div class="home-box">
+                <div class="section-wrapper">
+                    <div class="section-content">
+                        <span class="section-title" data-section="home">AMARA</span>
+                    </div>
+                    <div class="section-collapsed">
+                        <button class="back-arrow" data-section="home">←</button>
+                        <nav class="horizontal-menu">
+                            <ul>
+                                <li><a href="#home" class="nav-link" data-section="home">HOME</a></li>
+                                <li><a href="#PERIPHERALS" class="nav-link" data-section="PERIPHERALS">PERIPHERALS</a></li>
+                                <li><a href="#deadlock" class="nav-link" data-section="deadlock">DEADLOCK</a></li>
+                                <li><a href="#linux" class="nav-link" data-section="linux">LINUX</a></li>
+                                <li><a href="#specs" class="nav-link" data-section="specs">SPECS</a></li>
+                                <li><a href="#about" class="nav-link" data-section="about">ABOUT</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<footer id="tabs" style="font-size: 15px" >
-  <p></p>
-    <a href="https://www.twitch.tv/am2ra">twitch</a>
-    <span> | </span>
-    <a href="https://www.youtube.com/@am2ra">youtube</a>
-    <span> | </span>
-    <a href="https://www.twitter.com/amarafps">twitter</a>
-    <span> | </span>
-    <a href="https://bsky.app/profile/am2ra.bsky.social">bluesky</a>
-    <p></p>
-</footer>
-<script src="./java.js"></script>
+        <!-- PERIPHERALS Section -->
+        <div id="PERIPHERALS" class="content-section">
+            <div class="text-box">
+                <div class="section-wrapper">
+                    <div class="section-content">
+                        <h2 class="section-title" data-section="PERIPHERALS">PERIPHERALS</h2>
+                    </div>
+                    <div class="section-collapsed">
+                        <button class="back-arrow" data-section="PERIPHERALS">←</button>
+                        <span class="collapsed-text">Mouse: WLMOUSE BEAST X MAX</span>
+                        <span class="collapsed-text">2nd Mouse: G-Wolves HSK Pro Ace</span><br><br>
+                        <span class="collapsed-text">Mousepad: Artisan Raiden XXL</span><br><br>
+                        <span class="collapsed-text">Monitor: Alienware AW2525HM 320Hz</span><br><br>
+                        <span class="collapsed-text">IEM: Moondrop Aria Snow Edition</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DEADLOCK Section -->
+        <div id="deadlock" class="content-section">
+            <div class="text-box">
+                <div class="section-wrapper">
+                    <div class="section-content">
+                        <h2 class="section-title" data-section="deadlock">DEADLOCK</h2>
+                    </div>
+                    <div class="section-collapsed">
+                        <button class="back-arrow" data-section="deadlock">←</button>
+                        <span class="collapsed-text">Deadlock Config:</span>
+                        <a class="collapsed-text" target="_blank" href="https://drive.google.com/drive/folders/1yuVEmf87t7Qmy69hXXv0fiMFW4C-2K2v?usp=sharing" style="color:#00bfffcb;">Google Drive</a>
+                        <a class="collapsed-text">Resolution: 1280x1080</a> <br>
+                        <a class="collapsed-text">Mods:</a>
+                        <a class="collapsed-text">QOL Lock</a>
+                        <a class="collapsed-text">Low LOD Sinners Fix <span style="color:#ffffff88">(Also in Config Drive)</span></a><br>
+                        <a class="collapsed-text">Binds: </a>
+                        <a class="collapsed-text">Google Drive</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LINUX Section -->
+        <div id="linux" class="content-section">
+            <div class="text-box">
+                <div class="section-wrapper">
+                    <div class="section-content">
+                        <h2 class="section-title" data-section="linux">LINUX</h2>
+                    </div>
+                    <div class="section-collapsed">
+                        <button class="back-arrow" data-section="linux">←</button>
+                        <span class="collapsed-text">Distro: CachyOS</span>
+                        <span class="collapsed-text">Window Manager: i3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SPECS Section -->
+        <div id="specs" class="content-section">
+            <div class="text-box">
+                <div class="section-wrapper">
+                    <div class="section-content">
+                        <h2 class="section-title" data-section="specs">SPECS</h2>
+                    </div>
+                    <div class="section-collapsed">
+                        <button class="back-arrow" data-section="specs">←</button>
+                        <span class="collapsed-text">CPU: AMD Ryzen 5 5600x</span>
+                        <span class="collapsed-text">RAM: 16gb 3200MHz DDR4</span>
+                        <span class="collapsed-text">GPU: NVIDIA RTX 3060Ti</span>
+                        <span class="collapsed-text">OS: Windows 11 (Arch Linux on VM)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ABOUT Section -->
+        <div id="about" class="content-section">
+            <div class="text-box">
+                <div class="section-wrapper">
+                    <div class="section-content">
+                        <h2 class="section-title" data-section="about">ABOUT</h2>
+                    </div>
+                    <div class="section-collapsed">
+                        <button class="back-arrow" data-section="about">←</button>
+                        <span class="collapsed-header">AMARA</span>
+                        <span class="collapsed-text" style="padding-top: 3rem;">Hi, I'm amara. I don't know what to put in the description just yet, so I've decided I'll come back later to add one.</span>
+                        <div class="about-links">
+                        <a href="https://twitter.com/amarafps" target="_blank" class="about-link">Twitter</a>
+                        <a href="https://twitch.tv/am2ra" target="_blank" class="about-link">Twitch</a>
+                        <a href="https://youtube.com/@am2ra" target="_blank" class="about-link">YouTube</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main> 
+    <footer>
+        <p></p>
+    </footer>
+
+    <script>
+        // Navigation link clicks
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Hide all sections
+                document.querySelectorAll('.content-section').forEach(section => {
+                    section.classList.remove('active');
+                    section.classList.remove('collapsed');
+                });
+                
+                // Show selected section
+                const sectionId = link.getAttribute('data-section');
+                const section = document.getElementById(sectionId);
+                section.classList.add('active');
+                
+                // Show/hide navigation menu
+                const navMenu = document.querySelector('main > .text-box');
+                if (sectionId === 'home') {
+                    navMenu.style.display = 'none';
+                } else {
+                    navMenu.style.display = 'flex';
+                }
+            });
+        });
+
+        // Section title clicks - toggle collapse
+        document.querySelectorAll('.section-title').forEach(title => {
+            title.addEventListener('click', (e) => {
+                const section = e.target.closest('.content-section');
+                section.classList.add('collapsed');
+            });
+        });
+
+        // Back arrow clicks - uncollapse
+        document.querySelectorAll('.back-arrow').forEach(arrow => {
+            arrow.addEventListener('click', (e) => {
+                const section = e.target.closest('.content-section');
+                section.classList.remove('collapsed');
+            });
+        });
+    </script>
 </body>
 </html>

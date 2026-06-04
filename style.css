@@ -1,0 +1,377 @@
+@font-face {
+  font-family: "PP Fraktion"; 
+  src: url("/Fonts/PPFraktionMono.otf");
+}
+@font-face {
+  font-family: "GT Super"; 
+  src: url("/Fonts/GT-Super-Display.otf");
+}
+@font-face {
+  font-family: "KHInterference"; 
+  src: url("/Fonts/KHInterference.otf");
+}
+
+@font-face {
+  font-family: "MOSM"; 
+  src: url("/Fonts/MOSM.otf");
+}
+@font-face {
+  font-family: "MOSR"; 
+  src: url("/Fonts/MOSR.otf");
+}
+
+
+:root {
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-size: 0.5vw;
+    background-color: #000000;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#content {
+    max-width: 60%;
+}
+
+.text-box {
+    width: 40rem;
+    height: 60rem;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0.3rem solid #494949;
+    border-radius: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "GT Super";
+    color: #fff;
+    font-size: 2.4rem;
+    cursor: text;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+main > .text-box {
+    display: none;
+}
+
+#peripherals.active ~ .text-box,
+#deadlock.active ~ .text-box,
+#linux.active ~ .text-box,
+#specs.active ~ .text-box,
+#about.active ~ .text-box {
+    display: flex;
+}
+
+.vertical-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.vertical-menu li {
+    width: 100%;
+}
+
+.vertical-menu a {
+    display: block;
+    padding: 0.6rem 0;
+    color: #ffffffcb;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-align: left;
+    font-family: "MOSR";
+    font-size: 3rem;
+    position: relative;
+}
+
+.vertical-menu a:hover {
+    transform: translateX(0.5rem);
+        color: #fff;
+}
+
+.about-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    width: 100rem;
+    position: relative;
+}
+
+.about-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+    text-align: left;
+}
+
+.about-image {
+    flex-shrink: 0;
+}
+
+.about-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    width: 24rem;
+    height: 24rem;
+    border-radius: 0;
+/*    border: 0.3rem solid #fff;*/ 
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.about-name {
+    font-size: 8rem;
+    font-family: "GT Super";
+    color: #fff;
+    margin: 0;
+}
+
+.about-description {
+    font-size: 1.8rem;
+    font-family: "PP Fraktion";
+    color: #ccc;
+    line-height: 1.5;
+    margin: 1rem 0;
+}
+
+.about-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 3rem;
+}
+
+.about-link {
+    padding: 0.4rem 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    color: #ffffff75;
+    text-decoration: none;
+    font-family: "PP Fraktion";
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.about-link:hover {
+    transform: translateY(-0.2rem);
+    color: #fff;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 8rem;
+    font-family: "GT Super";
+    color: #fff;
+    margin: 0;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.section-title:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+}
+
+.section-description {
+    font-size: 1.8rem;
+    font-family: "PP Fraktion";
+    color: #ccc;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.content-section .text-box {
+    width: 100rem;
+    height: 60rem;
+}
+
+.section-collapsed {
+    display: none;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-section.collapsed .section-content {
+    display: none;
+}
+
+.content-section.collapsed .section-collapsed {
+    display: flex;
+    opacity: 1;
+}
+
+.back-arrow {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+    font-family: "GT Super";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 4rem;
+    height: 2rem;
+}
+
+.back-arrow:hover {
+    transform: translateX(-0.5rem);
+    opacity: 0.8;
+}
+
+.collapsed-text {
+    font-size: 3rem;
+    font-family: "PP Fraktion";
+    color: #ffffffc0;
+}
+
+.collapsed-header {
+    font-size: 6rem;
+    font-family: "GT Super";
+    color: #fff;
+}
+
+.horizontal-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.horizontal-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.horizontal-menu li {
+    display: flex;
+}
+
+.horizontal-menu a {
+    display: block;
+    padding: 0.6rem 0;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-family: "MOSM";
+    font-size: 1.8rem;
+    position: relative;
+}
+
+.horizontal-menu a:hover {
+    transform: translateY(-0.3rem);
+    opacity: 0.8;
+}
+
+.home-box {
+    width: 142rem;
+    height: 60rem;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0.3rem solid #494949;
+    border-radius: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "GT Super";
+    color: #fff;
+    font-size: 2.4rem;
+    cursor: text;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
