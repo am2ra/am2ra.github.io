@@ -1,0 +1,8 @@
+[
+  {
+    "name": "Deadlock Net Jitter",
+    "dateAdded": "2026-08-05",
+    "description": "Net jitter fix for Deadlock on Linux",
+    "fix": "sudo pacman -S iwd \n sudo systemctl enable iwd \n sudo systemctl disable wpa_supplicant \n sudo systemctl start iwd \n sudo stop wpa_supplicant "
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "name": "WL Mouse BEAST X Max",
+    "brand": "WL Mouse",
+    "tag": "mouse",
+    "href": "https://www.wlmouse.com/en-wl/products/beast-max",
+    "In use": "true"
+  },
+    {
+    "name": "G-Wolves HSK Pro Ace",
+    "brand": "G-Wolves",
+    "tag": "mouse",
+    "href": "https://shop.g-wolves.com/products/g-wolves-hsk-pro-ace",
+    "In use": "false"
+  },
+    {
+    "name": "WL Mouse BEAST X Mini - Side Slits",
+    "brand": "WL Mouse",
+    "tag": "mouse",
+    "href": "https://www.wlmouse.com/en-wl/products/mini-pro",
+    "In use": "false"
+  },
+    {
+    "name": "Endgame Gear OP18k",
+    "brand": "Endgame Gear",
+    "tag": "mouse",
+    "href": "https://endgamegear.com/products/op1-8k-v2-wired-gaming-mouse?srsltid=AfmBOopiWVdJSYT7ExvmGnaM4T6UKJxfn4izQ7IBb-AtalH2HoKUaaFp",
+    "In use": "false"
+  },
+  {
+    "name": "Logitech G Pro X Superlight",
+    "brand": "Logitech",
+    "tag": "mouse",
+    "href": "https://www.logitechg.com/en-us/products/gaming-mice/pro-x-superlight-wireless-gaming-mouse.910-005270.html",
+    "In use": "false"
+  },
+  {
+    "name": "Lamzu Thorn",
+    "brand": "Lamzu",
+    "tag": "mouse",
+    "href": "https://lamzu.com/products/lamzu-thorn-gaming-mouse?srsltid=AfmBOopKND6MEPolTpIufVOVgPtFtf4v-v2k5gmDak5ww1h9lx_12075",
+    "In use": "false"
+  },  
+
+
+
+
+  {
+    "name": "Drunkdeer A75",
+    "brand": "Drunkdeer",
+    "tag": "keyboard",
+    "href": "https://drunkdeer.com/products/adjustable-keyboard-magnetic-switch-a75",
+    "In use": "true"
+  },
+
+
+  {
+    "name": "Artisan Raiden XXL - Mid",
+    "brand": "Artisan",
+    "tag": "mousepad",
+    "href": "https://artisan-jp.com/global/products/ninja-fx/fx-raiden",
+    "In use": "true"
+  },
+  {
+    "name": "Artisan Raiden XXL - Soft",
+    "brand": "Artisan",
+    "tag": "mousepad",
+    "href": "https://artisan-jp.com/global/products/ninja-fx/fx-raiden",
+    "In use": "false"
+  },
+  {
+    "name": "Kurosun Ninja",
+    "brand": "Kurosun",
+    "tag": "mousepad",
+    "href": "https://esportsgear.uk/products/kurosun-ninja-gaming-mousepad-uk-kur-ninja?srsltid=AfmBOopW8pC0KvcGVgcm44jEhjF5ugwEFeW7a55HUfkokB8G7o6lU4KL",
+    "In use": "false"
+  },
+  {
+    "name": "Skypad 3.0 XL",
+    "brand": "Skypad",
+    "tag": "mousepad",
+    "href": "https://www.amazon.co.uk/SkyPAD-Professional-Special-Improved-Precision-White/dp/B09MJ4L9NG",
+    "In use": "false"
+  },
+    {
+    "name": "Artisan Hayate Otsu XL - XSoft",
+    "brand": "Artisan",
+    "tag": "mousepad",
+    "href": "https://artisan-jp.com/global/fx-hayate-otsu",
+    "In use": "false"
+  },
+
+
+
+  {
+    "name": "Alienware AW2525HM 320hz",
+    "brand": "Alienware",
+    "tag": "monitor",
+    "href": "https://www.dell.com/en-uk/shop/alienware-25-320hz-gaming-monitor-aw2525hm/apd/210-bryj/monitors-monitor-accessories",
+    "In use": "true"
+  }
+]

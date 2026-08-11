@@ -5,197 +5,63 @@
     <meta charset="UTF-8">
     <meta content="0; URL=https://am2ra.github.io/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./angel.css">
     <link rel="icon" type="image/x-icon" href="./img/favicon.png">
     <meta property="og:title" content="am2ra's personal site.">
     <meta property="og:description" content="Have you been looking forward to it that much?">
     <meta property="og:url" content="https://am2ra.github.io/" />
     <meta property="og:image" content="https://i.imgur.com/u1R5oMK.png">
     <title>am2ra</title>
+    <style>
+</style>
 </head>
 <body>
-
-<div id="background"></div>
-    <main>
-        <div class="text-box">
-            <nav class="vertical-menu">
-                <ul>
-                    <li><a href="#home" class="nav-link" data-section="home">HOME</a></li>
-                    <li><a href="#PERIPHERALS" class="nav-link" data-section="PERIPHERALS">PERIPHERALS</a></li>
-                    <li><a href="#deadlock" class="nav-link" data-section="deadlock">DEADLOCK</a></li>
-                    <li><a href="#linux" class="nav-link" data-section="linux">LINUX</a></li>
-                    <li><a href="#specs" class="nav-link" data-section="specs">SPECS</a></li>
-                    <li><a href="#about" class="nav-link" data-section="about">ABOUT</a></li>
-                </ul>
-            </nav>
-        </div>
-
-        <!-- HOME Section -->
-        <div id="home" class="content-section active">
-            <div class="home-box">
-                <div class="section-wrapper">
-                    <div class="section-content">
-                        <span class="section-title" data-section="home">AMARA</span>
-                    </div>
-                    <div class="section-collapsed">
-                        <button class="back-arrow" data-section="home">←</button>
-                        <nav class="horizontal-menu">
-                            <ul>
-                                <li><a href="#home" class="nav-link" data-section="home">HOME</a></li>
-                                <li><a href="#PERIPHERALS" class="nav-link" data-section="PERIPHERALS">PERIPHERALS</a></li>
-                                <li><a href="#deadlock" class="nav-link" data-section="deadlock">DEADLOCK</a></li>
-                                <li><a href="#linux" class="nav-link" data-section="linux">LINUX</a></li>
-                                <li><a href="#specs" class="nav-link" data-section="specs">SPECS</a></li>
-                                <li><a href="#about" class="nav-link" data-section="about">ABOUT</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
+<nav>
+        <article>
+            <h2>am2ra</h2>
+            <div>
+                <a href="./">Home</a>
+                <br>
+                <a href="./p">Peripherals</a>
+                <br>
+                <a href="./dl">Deadlock</a>
+                <br>
+                <a href="./l">Linux</a>
             </div>
+        </article>
+</nav>
+
+<main>
+    <article>
+        <h1>am2ra</h1>
+        <p class="description">website for various things i need, whether its fixes for software issues or files i need for games, also contains some miscellaneous information</p>
+    </article>
+    <div class="homepage">
+        <article>
+            <h1>Recent Fixes</h1>
+            <ul id="list"></ul>
+            <div id="overlay">
+            <div id="modal">
+                <button id="closeBtn" aria-label="Close">&times;</button>
+                <h2 id="modalTitle"></h2>
+                <table id="modalTable"></table>
         </div>
+    </div>
+</article>
+    <article>
+        <h1>Links</h1>
+        <h2>
+            <li><a href="https://twitter.com/amarafps" target="_blank" rel="noopener noreferrer" >Twitter</a></li>
+            <li><a href="https://twitch.tv/am2ra" target="_blank" rel="noopener noreferrer" >Twitch</a></li>
+            <li><a href="https://bsky.app/profile/witchsslave.bsky.social" target="_blank" rel="noopener noreferrer" >Bluesky</a></li>
+            <li><a href="https://youtube.com/@am2ra" target="_blank" rel="noopener noreferrer" >YouTube</a></li>
+            <li><a href="https://yourgamerprofile.com/amara" target="_blank" rel="noopener noreferrer" >Your Gamer Profile</a></li>
+            <li><a href="https://letterboxd.com/am2ra/" target="_blank" rel="noopener noreferrer" >Letterboxd</a></li>
+        </h2>
+    </article>
+</div>
 
-        <!-- PERIPHERALS Section -->
-        <div id="PERIPHERALS" class="content-section">
-            <div class="text-box">
-                <div class="section-wrapper">
-                    <div class="section-content">
-                        <h2 class="section-title" data-section="PERIPHERALS">PERIPHERALS</h2>
-                    </div>
-                    <div class="section-collapsed">
-                        <button class="back-arrow" data-section="PERIPHERALS">←</button>
-                        <span class="collapsed-text">Mouse: WLMOUSE BEAST X MAX</span>
-                        <span class="collapsed-text">2nd Mouse: G-Wolves HSK Pro Ace</span><br><br>
-                        <span class="collapsed-text">Mousepad: Artisan Raiden XXL</span><br><br>
-                        <span class="collapsed-text">Monitor: Alienware AW2525HM 320Hz</span><br><br>
-                        <span class="collapsed-text">IEM: Moondrop Aria Snow Edition</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- DEADLOCK Section -->
-        <div id="deadlock" class="content-section">
-            <div class="text-box">
-                <div class="section-wrapper">
-                    <div class="section-content">
-                        <h2 class="section-title" data-section="deadlock">DEADLOCK</h2>
-                    </div>
-                    <div class="section-collapsed">
-                        <button class="back-arrow" data-section="deadlock">←</button>
-                        <span class="collapsed-text">Deadlock Config:</span>
-                        <a class="collapsed-text" target="_blank" href="https://drive.google.com/drive/folders/1yuVEmf87t7Qmy69hXXv0fiMFW4C-2K2v?usp=sharing" style="color:#00bfffcb;">Google Drive</a>
-                        <a class="collapsed-text">Resolution: 1280x1080</a> <br>
-                        <a class="collapsed-text">Mods:</a>
-                        <a class="collapsed-text">QOL Lock</a>
-                        <a class="collapsed-text">Low LOD Sinners Fix <span style="color:#ffffff88">(Also in Config Drive)</span></a><br>
-                        <a class="collapsed-text">Binds: </a>
-                        <a class="collapsed-text">Google Drive</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- LINUX Section -->
-        <div id="linux" class="content-section">
-            <div class="text-box">
-                <div class="section-wrapper">
-                    <div class="section-content">
-                        <h2 class="section-title" data-section="linux">LINUX</h2>
-                    </div>
-                    <div class="section-collapsed">
-                        <button class="back-arrow" data-section="linux">←</button>
-                        <span class="collapsed-text">Distro: CachyOS</span>
-                        <span class="collapsed-text">Window Manager: i3</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- SPECS Section -->
-        <div id="specs" class="content-section">
-            <div class="text-box">
-                <div class="section-wrapper">
-                    <div class="section-content">
-                        <h2 class="section-title" data-section="specs">SPECS</h2>
-                    </div>
-                    <div class="section-collapsed">
-                        <button class="back-arrow" data-section="specs">←</button>
-                        <span class="collapsed-text">CPU: AMD Ryzen 5 5600x</span>
-                        <span class="collapsed-text">RAM: 16gb 3200MHz DDR4</span>
-                        <span class="collapsed-text">GPU: NVIDIA RTX 3060Ti</span>
-                        <span class="collapsed-text">OS: Windows 11 (Arch Linux on VM)</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ABOUT Section -->
-        <div id="about" class="content-section">
-            <div class="text-box">
-                <div class="section-wrapper">
-                    <div class="section-content">
-                        <h2 class="section-title" data-section="about">ABOUT</h2>
-                    </div>
-                    <div class="section-collapsed">
-                        <button class="back-arrow" data-section="about">←</button>
-                        <span class="collapsed-header">AMARA</span>
-                        <span class="collapsed-text" style="padding-top: 3rem;">Hi, I'm amara. I don't know what to put in the description just yet, so I've decided I'll come back later to add one.</span>
-                        <div class="about-links">
-                        <a href="https://twitter.com/amarafps" target="_blank" class="about-link">Twitter</a>
-                        <a href="https://twitch.tv/am2ra" target="_blank" class="about-link">Twitch</a>
-                        <a href="https://youtube.com/@am2ra" target="_blank" class="about-link">YouTube</a>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main> 
-    <footer>
-        <p></p>
-    </footer>
-
-    <script>
-        // Navigation link clicks
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                
-                // Hide all sections
-                document.querySelectorAll('.content-section').forEach(section => {
-                    section.classList.remove('active');
-                    section.classList.remove('collapsed');
-                });
-                
-                // Show selected section
-                const sectionId = link.getAttribute('data-section');
-                const section = document.getElementById(sectionId);
-                section.classList.add('active');
-                
-                // Show/hide navigation menu
-                const navMenu = document.querySelector('main > .text-box');
-                if (sectionId === 'home') {
-                    navMenu.style.display = 'none';
-                } else {
-                    navMenu.style.display = 'flex';
-                }
-            });
-        });
-
-        // Section title clicks - toggle collapse
-        document.querySelectorAll('.section-title').forEach(title => {
-            title.addEventListener('click', (e) => {
-                const section = e.target.closest('.content-section');
-                section.classList.add('collapsed');
-            });
-        });
-
-        // Back arrow clicks - uncollapse
-        document.querySelectorAll('.back-arrow').forEach(arrow => {
-            arrow.addEventListener('click', (e) => {
-                const section = e.target.closest('.content-section');
-                section.classList.remove('collapsed');
-            });
-        });
-    </script>
-</body>
-</html>
+<script src="list.js"></script>    
+</main>
+    </header>
