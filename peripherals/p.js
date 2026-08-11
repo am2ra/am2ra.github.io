@@ -1,4 +1,4 @@
-const JSON_URL = "p.json";
+const JSON_URL = new URL("p.json", document.currentScript.src).href;
 
 // Optional tag filter, set via <script src="p.js" data-tag="mouse"></script>.
 // Leave the attribute off to show every item.
